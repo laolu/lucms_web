@@ -1,0 +1,118 @@
+.keywordCard {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 0;
+  background: var(--color-bg-white-wrap, #fff);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 12px;
+}
+
+.keywordCardCell {
+  padding: 8px 16px 0 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: hidden;
+  flex-shrink: 0;
+  width: 33.33%;
+}
+
+.keywordCardCell:after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  top: 4px;
+  bottom: 4px;
+  right: 0;
+  background: var(--color-border-hr, #eceef2);
+}
+
+.keywordCardCell:last-child:after {
+  width: 0;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.iconWrap {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0066ff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: rgba(0, 102, 255, 0.08);
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #666666;
+}
+
+.keywordTagsWrap {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 72px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.keywordTag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  margin: 0 12px 8px 0;
+  border-radius: 100px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(28, 31, 35, 0.03);
+  color: #666666;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.keywordTag:hover {
+  background: rgba(28, 31, 35, 0.06);
+  color: #333333;
+}
+
+/* 暗色主题支持 */
+:global(.dark) .iconWrap {
+  color: #3b82f6;
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+:global(.dark) .title {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+:global(.dark) .keywordTag {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+:global(.dark) .keywordTag:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.95);
+}
+
+:global(.dark) .keywordCardCell:after {
+  background: rgba(255, 255, 255, 0.1);
+} 

@@ -1,0 +1,45 @@
+.subBanner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.subBannerCell {
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  cursor: pointer;
+  border-radius: 12px;
+  border: 8px solid #fff;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.subBannerCell:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.image {
+  object-fit: cover;
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+  transition: transform 0.3s ease;
+}
+
+.subBannerCell:hover .image {
+  transform: scale(1.05);
+} 
